@@ -1,0 +1,3 @@
+![sync-async-execution](image.png)
+
+In this picture, we can see that "Nisa 2006483100: hey hey" is executed before "Nisa 2006483100: howdy!" even though it's defined in the code AFTER "Nisa 2006483100: howdy!". This is because the task spawned is not executed immediately. It is first queued and the tasks in the queue will be executed when executor.run() is called. In the code, we can see that executor.run() is executed after 
